@@ -35,17 +35,18 @@ export default function JuegoBanderas (){
 
     useEffect(() => {
         const handleSubmit = () => {
-            if(respuesta.toLowerCase() === paisSeleccionado.name.toLowerCase()){
-                setPuntaje(base => base + 10);
-
-            }else{
-                setPuntaje(base => base - 1);
+            if (respuesta.toLowerCase() === paisSeleccionado.name.toLowerCase()) {
+                setPuntaje(puntaje => puntaje + 10);
+                alert('¡Correcto! Sumaste 10 puntos');
+            } else {
+                setPuntaje(puntaje => Math.max(0, puntaje - 1));
+                alert('Incorrecto. -1 punto. El país era ' + paisSeleccionado.name);
             }
+            setRespuesta('');
+
         }
 
     }, [])
-    
-
 
     
     return(
@@ -53,7 +54,7 @@ export default function JuegoBanderas (){
             <h1>Bienvenido al juego de las banderas</h1>
             <p>Jugador: {jugador}</p>
             <p>Puntuacion: {puntaje}</p>
-
+            
             <input type="text"
                 value ={adivina}
                 onChange ={ponerAlgo}
