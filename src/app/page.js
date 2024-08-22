@@ -7,7 +7,7 @@ export default function Home() {
     <div style={{ textAlign: 'center', padding: '50px' }}>
       <h1>Bienvenido al Juego de Banderas</h1>
       <p>¡Pon a prueba tu conocimiento de banderas del mundo!</p>
-      <Link href="/banderas">
+      <Link href="/Banderas">
         Comenzar el Juego
       </Link>
     </div>
