@@ -1,0 +1,22 @@
+.animatedTitle {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #f0f; /* Color de fondo de las letras */
+    background: linear-gradient(to right, #f0f, #f0f); /* Gradiente de fondo para simular el efecto de múltiples colores */
+    -webkit-background-clip: text;
+  }
+  
+  .animatedTitle span {
+    display: inline-block;
+    animation: shift 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes shift {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }

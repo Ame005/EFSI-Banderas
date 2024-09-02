@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import style from '../../style'
+import styles from '../../style'; 
 
 export default function JuegoBanderas() {
     const [paises, setPaises] = useState([]);
@@ -45,28 +45,30 @@ export default function JuegoBanderas() {
         seleccionPaisAleatorio(paisesRestantes); // Selecciona un nuevo país después de adivinar
     };
 
-    return (
+    
+  return (
+    <div >
+      <h1>Bienvenido al juego de las banderas</h1>
+      <p>Jugador: {jugador}</p>
+      <p>Puntuación: {puntaje}</p>
+      {paisSeleccionado ? (
         <div>
-            <h1>Bienvenido al juego de las banderas</h1>
-            <p>Jugador: {jugador}</p>
-            <p>Puntuación: {puntaje}</p>
-            {paisSeleccionado ? (
-                <div>
-                    <h3>Adivina el nombre del país</h3>
-                    <img src={paisSeleccionado.flag} alt="Bandera del país" />
-                    <form onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            value={respuesta}
-                            onChange={inputUser}
-                            placeholder="Nombre del País"
-                        />
-                        <button type="submit">Adivinar</button>
-                    </form>
-                </div>
-            ) : (
-                <p>No hay más países para mostrar</p>
-            )}
+          <h3>Adivina el nombre del país</h3>
+          <img src={paisSeleccionado.flag} alt="Bandera del país" style={styles.img} />
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={respuesta}
+              onChange={inputUser}
+              placeholder="Nombre del País"
+              style={styles.input}
+            />
+            <button type="submit" style={styles.button}>Adivinar</button>
+          </form>
         </div>
-    );
+      ) : (
+        <p>No hay más países para mostrar</p>
+      )}
+    </div>
+  );
 }
