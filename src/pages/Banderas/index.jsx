@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import style from '../../style'
 
 export default function JuegoBanderas() {
     const [paises, setPaises] = useState([]);
