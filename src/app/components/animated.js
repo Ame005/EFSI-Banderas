@@ -1,21 +1,22 @@
 import React from 'react';
-import styles from './title.module.css'; // Importa los estilos del módulo CSS
+import './style.css'
 
-const AnimatedTitle = () => {
+const Titulo = () => {
+  // Lista de letras específicas en el orden deseado
+  const letters = 'Q-BANDERAS'.split(''); // Divide la cadena en un array de caracteres
+
   return (
-    <h1 className={styles.animatedTitle}>
-      <span>Q-</span>
-      <span>B</span>
-      <span>A</span>
-      <span>N</span>
-      <span>D</span>
-      <span>E</span>
-      <span>R</span>
-      <span>A</span>
-      <span>S</span>
-
-    </h1>
+    <div>
+      {/* Lista ordenada con las letras de "Q-BANDERAS" */}
+      <ol className="snow-bros">
+        {letters.map((letter, index) => (
+          // `letter` es el carácter actual del array
+          // `index` es la posición de ese carácter en el array
+          <li className={index}>{letter}</li>
+        ))}
+      </ol>
+    </div>
   );
 };
 
-export default AnimatedTitle;
+export default Titulo;
