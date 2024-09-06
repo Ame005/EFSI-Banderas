@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import style from './style'
+import './styles.css'
 
 export default function JuegoBanderas() {
     const [paises, setPaises] = useState([]);
@@ -47,21 +47,20 @@ export default function JuegoBanderas() {
 
     
   return (
-    <div style={style.container}>
-      <h1>Bienvenido al juego de las banderas</h1>
-      <p>Jugador: {jugador}</p>
-      <p>Puntuación: {puntaje}</p>
+    <div className='container'>
+      <h1>Adivina el nombre del país</h1>
+      {/*<p>Jugador: {jugador}</p>*/}
+      <h3>Puntuación: {puntaje}</h3>
       {paisSeleccionado ? (
         <div>
-          <h3>Adivina el nombre del país</h3>
-          <img src={paisSeleccionado.flag} alt="Bandera del país" style={style.imagen} />
+          
+          <img src={paisSeleccionado.flag} alt="Bandera del país" />
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               value={respuesta}
               onChange={inputUser}
               placeholder="Nombre del País"
-              /*style={styles.input}*/
             />
             <button type="submit">Adivinar</button>
           </form>

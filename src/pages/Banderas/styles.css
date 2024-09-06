@@ -1,0 +1,73 @@
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+div{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+img{
+    width: 800px;
+    height: 400px;
+    min-width: none;
+    min-height: none;
+    margin: 1%;
+}
+h2,h3,h4,h5,h6{
+    color: #ff93cc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1%;
+}
+h1{
+    color:#d81b60;
+    font-size: 300%;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/**/
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el input y el botón */
+    margin-top: 20px; /* Espacio superior para separarlo de la bandera */
+  }
+  
+  input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px; /* Ajusta según el tamaño que prefieras */
+    background-color: #333; /* Color de fondo acorde al diseño */
+    color: white; /* Texto blanco */
+  }
+  
+  input::placeholder {
+    color: #999; /* Color del placeholder */
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff93cc; /* Color acorde a los títulos */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d81b60; /* Efecto hover más oscuro */
+  }
+  
