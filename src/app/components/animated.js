@@ -1,20 +1,75 @@
 import React from 'react';
-import './style.css'
+import './style.scss'
 
 const Titulo = () => {
-  // Lista de letras específicas en el orden deseado
-  const letters = 'Q-BANDERAS'.split(''); // Divide la cadena en un array de caracteres
 
   return (
-    <div>
-      {/* Lista ordenada con las letras de "Q-BANDERAS" */}
-      <ol className="snow-bros">
-        {letters.map((letter, index) => (
-          // `letter` es el carácter actual del array
-          // `index` es la posición de ese carácter en el array
-          <li className={index}>{letter}</li>
-        ))}
-      </ol>
+    <div class="container">
+      <div class="box">
+        <span  style={{ '--i': 1 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+
+        <span  style={{ '--i': 2 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 3 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 4 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 5 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 6 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 7 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 8 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 9 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 10 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+        
+        <span  style={{ '--i': 11 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+
+        <span  style={{ '--i': 12 }}>
+        <i>Q -</i> <i>BANDERAS</i>
+        </span>
+
+        <span  style={{ '--i': 13 }}>
+        <i>Q -</i> <i>BANDERAS</i>
+        </span>
+
+        <span  style={{ '--i': 14 }}>
+        <i>Q -</i> <i>BANDERAS</i>
+        </span>
+
+        <span  style={{ '--i': 15 }}>
+        <i>Q -</i> <i>BANDERAS</i>
+        </span>
+
+        <span  style={{ '--i': 16 }}>
+          <i>Q -</i> <i>BANDERAS</i>
+        </span>
+      </div>
     </div>
   );
 };
